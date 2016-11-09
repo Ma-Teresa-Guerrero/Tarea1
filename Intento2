@@ -1,0 +1,185 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+class bus {
+	protected:
+		string origen;
+		string destino;
+		char h[15];
+		char h1
+	public:
+		bus (string origen1, string destino1, char h2){
+			
+			origen = origen1;
+			destino = destino1;
+			h1 = h2;
+			h[0] = 'a';
+			h[1] = 'b';
+			h[2] = 'c';
+			h[3] = 'd';
+			h[4] = 'e';
+			h[5] = 'f';
+			h[6] = 'g';
+			h[7] = 'h';
+			h[8] = 'i';
+			h[9] = 'j';
+			h[10] = 'k';
+			h[11] = 'l';
+			h[12] = 'm';
+			h[13] = 'n';
+			h[14] = 'o';
+		}
+		virtual void listarAsientos(){
+		}
+};
+
+class semicama : public bus {
+	public:
+		semicama() : bus(origen, destino, h1){
+		}
+		void listarAsientos(){
+			if (origen == "santiago"){
+				if (h1 == 'a'){
+					cout << "Buses semicama que saldran de Santiago a las 08:00" << endl;
+					for(int i=0; i<45; i++){
+					
+					}
+				}
+			}
+		}
+};
+class sistema : public bus{
+	
+	string santiago_sec[30];
+	string santiago_sac[30];
+	string santiago_pre[30];
+	string rancagua_sec[30];
+	string rancagua_sac[30];
+	string rancagua_pre[30];
+	string valparaiso_sec[30];
+	string valparaiso_sac[30];
+	string valparaiso_pre[30];
+	string laserena_sec[30];
+	string laserena_sac[30];
+	string laserena_pre[30];
+	string hora_final[15];
+	string tipo;
+	//string origen_c;
+	public:
+		sistema(string tipo1) : bus(origen, destino, h1){
+			
+			tipo = tipo1;
+			//origen_c = origen1;
+			for(int i=0; i<30; i++){
+				santiago_sec[i] = "0";
+				santiago_sac[i] = "0";
+				santiago_pre[i] = "0";
+				rancagua_sec[i] = "0";
+				rancagua_sac[i] = "0";
+				rancagua_pre[i] = "0";
+				valparaiso_sec[i] = "0";
+				valparaiso_sac[i] = "0";
+				valparaiso_pre[i] = "0";
+				laserena_sec[i] = "0";
+				laserena_sac[i] = "0";
+				laserena_pre[i] = "0";
+			}
+
+		}
+		int verificarHora(){
+			for(int i=0; i<15; i++){
+				if(h[i] == h1){
+					hora_final[i] = h1;
+				}
+			}
+			return 0;
+		}
+		void listarAsientos(){
+			
+		}
+};
+
+int main(int argc, char** argv) {
+	
+	string rut1;
+	string tipo1;
+	string origen2;
+	string destino2;
+	int asiento2;
+	
+	char h;
+	cout << "escoja hora:" << endl << "a) 8:00" << endl << "b) 9:00" << endl << "c) 10:00" << endl << "d) 11:00" << endl << "e) 12:00" << endl << "f) 13:00" << endl << "g) 14:00" << endl << "h) 15:00" << endl << "i) 16:00" << endl << "j) 17:00" << endl << "k) 18:00" << endl << "l) 19:00" << endl << "m) 20:00" << endl << "n) 21:00" << endl << "o) 22:00" << endl;
+	cin >> h;
+	cout << "Ingrese:" << endl << "Tipo:  ";
+	cin >> tipo1;
+	cout << endl << "Rut:  ";
+	cin >> rut1;
+	while (origen2 == destino2){  //no se puede comprar un boleto si el destino y el origen son iguales
+		cout << endl << "Origen:  ";
+		cin >> origen2;
+		cout << endl << "Destino:  ";
+		cin >> destino2;
+		cout << endl << 
+	}
+	vector<bus*> a_sec(4);//hay 8 buses de 1 tipo x hora x 4 ciudades.
+	vector<bus*> b_sec(4);
+	vector<bus*> c_sec(4);
+	vector<bus*> d_sec(4);
+	vector<bus*> e_sec(4);
+	vector<bus*> f_sec(4);
+	vector<bus*> g_sec(4);
+	vector<bus*> h_sec(4);
+	vector<bus*> i_sec(4);
+	vector<bus*> j_sec(4);
+	vector<bus*> k_sec(4);
+	vector<bus*> l_sec(4);
+	vector<bus*> m_sec(4);
+	vector<bus*> n_sec(4);
+	vector<bus*> o_sec(4);
+	vector<bus*> a_sac(4);
+	vector<bus*> b_sac(4);
+	vector<bus*> c_sac(4);
+	vector<bus*> d_sac(4);
+	vector<bus*> e_sac(4);
+	vector<bus*> f_sac(4);
+	vector<bus*> g_sac(4);
+	vector<bus*> h_sac(4);
+	vector<bus*> i_sac(4);
+	vector<bus*> j_sac(4);
+	vector<bus*> k_sac(4);
+	vector<bus*> l_sac(4);
+	vector<bus*> m_sac(4);
+	vector<bus*> n_sac(4);
+	vector<bus*> o_sac(4);
+	vector<bus*> a_pre(4);
+	vector<bus*> b_pre(4);
+	vector<bus*> c_pre(4);
+	vector<bus*> d_pre(4);
+	vector<bus*> e_pre(4);
+	vector<bus*> f_pre(4);
+	vector<bus*> g_pre(4);
+	vector<bus*> h_pre(4);
+	vector<bus*> i_pre(4);
+	vector<bus*> j_pre(4);
+	vector<bus*> k_pre(4);
+	vector<bus*> l_pre(4);
+	vector<bus*> m_pre(4);
+	vector<bus*> n_pre(4);
+	vector<bus*> o_pre(4);
+	
+	if (h == 'a'){
+		//bus a(origen1, destino1, h)
+		if (tipo1 == "semicama"){
+			if (origen1 == "santiago"){
+				bus a(origen1, destino1, h);
+				sistema a(tipo1);
+				a_sec[0] = a;
+			}
+		}
+	}
+	
+	return 0;
+}
