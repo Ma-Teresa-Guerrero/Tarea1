@@ -55,8 +55,9 @@ class semicama : public bus {
 	public:
 		semicama() : bus(origen, destino, hora){	
 			tipo = "semicama";
-			asientos[45] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-			
+			for (int i=0; i<45; i++){
+				asientos[i] = 0;
+			}
 		}
 		void listarAsientos1(){
 			
@@ -283,7 +284,9 @@ class saloncama : public bus {
 		saloncama() : bus(origen, destino, hora){
 			
 			tipo = "saloncama";
-			asientos[30] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+			for (int i=0; i<30; i++){
+				asientos[i] = 0;
+			}
 		}
 		void listarAsientos2(){
 			
@@ -510,7 +513,9 @@ class premium : public bus {
 		semicama() : bus(origen, destino, hora){
 			
 			tipo = "premium";
-			asientos[20] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+			for (int i=0; i<20; i++){
+				asientos[i] = 0;
+			}
 		}
 		void listarAsientos3(){
 			
